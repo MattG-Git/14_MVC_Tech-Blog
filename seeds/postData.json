@@ -1,0 +1,14 @@
+[
+    {
+      "title": "Importance of Semantic HTML",
+      "contents": "Using semantic HTML syntax is important for so many reasons. Firstly, it helps organize your code. Secondly, it helps the browswer and search engines read your content correctly."
+    },
+    {
+      "title": "When to Use a Ternary Operator",
+      "contents": "Are you tired of writing multiple lines of code? You can cut down on your else/if statements by using  the shorthand form known as a ternary operator! The syntax looks something like this: condition ? exprIfTrue : exprIfFalse"
+    },
+    {
+      "title": "What to do When you Need to Learn a Code Concept Quickly",
+      "contents": "Youtube has a vast selection of content creators with thousands of hours of useful coding information from html, CSS, javaScript, Js frameworks and libraries. "
+    }
+  ]
