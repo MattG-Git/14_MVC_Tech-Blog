@@ -1,11 +1,17 @@
 [
     {
-      "contents": "Great advice!"
+      "post_id": 1,
+      "contents": "Great advice!",
+      "user_id": 1
     },
     {
-      "contents": "This was super helpful"
+      "post_id": 2,
+      "contents": "This was super helpful",
+      "user_id": 2
     },
     {
-      "contents": "wow, what a great article"
+      "post_id": 3,
+      "contents": "wow, what a great article",
+      "user_id": 3
     }
   ]
