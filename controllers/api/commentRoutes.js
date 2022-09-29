@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const comments = await Comment.findAll({
     });
+
     res.render('post', {
       comments,
     });

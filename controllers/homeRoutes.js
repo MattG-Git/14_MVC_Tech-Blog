@@ -60,7 +60,10 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Post }, { model: Comment }],
+      include: [
+        { model: Post }, 
+      //  { model: Comment }
+      ],
     });
 
     const user = userData.get({ plain: true });
@@ -70,6 +73,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       logged_in: true
     });
   } catch (err) {
+    console.log(err); 
     res.status(500).json(err);
   }
 });
@@ -79,8 +83,15 @@ router.get('/login', (req, res) => {
     res.redirect('/dashboard');
     return;
   }
-
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+  res.render('signup');
 });
 
 module.exports = router;
