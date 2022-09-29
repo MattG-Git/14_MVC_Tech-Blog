@@ -7,29 +7,35 @@
   <title>Tech blog!</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
   <link rel="stylesheet" href="/css/style.css">
+  
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h3>
-        <a href="/">Tech blog</a>
-      </h3>
-      <nav>
+    <header class="display-flex justify-space-between align-center p-2 ">
+      <h1>
+        <a href="/" class=" text-decoration-none title">TECH BLOG</a>
+      </h1>
+      <nav class="justify-space-between">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/dashboard">Dashboard</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a class="text-decoration-none dashboard" href="/dashboard">Dashboard</a> |
+        <button id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
-        <a href="/signup">sign up</a>
+        <a class="text-decoration-none login" href="/login">login</a>
+        <a class="text-decoration-none signup" href="/signup">sign up</a>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-10">
       <!-- Render the sub layout -->
       {{{ body }}}
+        </div>
+      </div>
     </main>
     <footer>
       

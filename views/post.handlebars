@@ -1,6 +1,6 @@
-<div class="text-center">
-  <h2>{{title}}</h2>
-  <p>Written by: {{user.name}} on {{format_date date_created}}</p>
+<div class="text-center post">
+  <h2 class="post_title">{{title}}</h2>
+  <p class="date">Written by: {{user.name}} on {{format_date date_created}}</p>
   <p>{{contents}}</p>
 </div>
 
@@ -11,14 +11,15 @@
         <label for="inputComment" class="form-label">Comment Below:</label>
         <input type="comment" class="form-control" id="inputComment">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="submit btn btn-primary">Submit</button>
     </form>
 </div>
 {{/if}}
 
+<h4>Comments:</h4>
 {{#each comments as |comment|}}
-<div>
+<div class="comments">
     <p>{{comment.contents}}</p>
-    <p>Posted by: {{comment.user.name}} on {{format_date comment.date_created}}</p>
+    <p class="date">Posted by: {{comment.user.name}} on {{format_date comment.date_created}}</p>
 </div>
 {{/each}}

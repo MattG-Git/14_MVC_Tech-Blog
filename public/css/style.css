@@ -1,0 +1,93 @@
+header {
+    text-align: center;
+    background-color: #74828f;
+}
+
+.title {
+    color: #96c0ce;
+    font-weight: bold;
+}
+
+
+.login {
+    color: #beb9b5;
+    padding-right:35px;
+}
+
+.signup {
+    color: #beb9b5;
+}
+
+.dashboard {
+    color: #beb9b5;
+}
+
+.post_title {
+    color: #c25b56;
+    font-weight: bold;
+}
+
+.date {
+    color: #525564;
+    font-style: italic;
+}
+
+.login-form {
+    border: solid 2px #525564;
+    padding: 25px;
+}
+
+.signup-form {
+    border: solid 2px #525564;
+    padding: 25px;
+}
+
+.new-post-form {
+    border: solid 2px #525564;
+    padding: 25px;
+}
+
+.post {
+    border: solid 2px #525564;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.submit {
+    margin-bottom: 5rem;
+}
+
+.comments {
+    border: dotted 1px #525564;
+    padding: 25px; 
+}
+
+.post_comments {
+    border: dotted 1px #525564;
+    padding-top: 25px;
+}
+
+#delButton {
+    background-color: #525564;
+}
+
+#updateButton {
+    background-color: #525564;
+}
+
+h2 {
+    color: #525564;
+}
+
+h4 {
+    color: #525564;
+}
+
+body {
+    background-color:#fef6eb;
+}
+
+button {
+    background-color: #525564;
+    color: white;
+}

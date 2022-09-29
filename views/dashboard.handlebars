@@ -6,18 +6,18 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Author a New Blog Post:</h3>
+    <h2>Author a New Blog Post:</h2>
 
     <form class="form new-post-form">
       <div class="form-group">
-        <label for="title">Title:</label>
+        <label class="mb-3 pr-2" for="title">Title:</label>
         <input class="form-input" type="text" id="title" name="title" />
       </div>
       <div class="form-group">
         <label for="article">Article:</label>
         <textarea class="form-input" id="article" name="article"></textarea>
       </div>
-      <div class="form-group">
+      <div class="form-group mt-3">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
@@ -28,16 +28,15 @@
     <h3>Current Articles:</h3>
 
     {{#each posts as |post|}}
-    <div class="row mb-2">
+    <div class="row mb-2 post_comments">
       <div class="col-md-8">
         <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
         <p>{{post.contents}}</p>
       </div>
-      <div class="col-md-4 deletes">
-        <button id ="delButton" class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete</button>
-      </div>
-      <div class="col-md-4 updates"> 
-         <button id = "updateButton" class="btn btn-sm btn-primary" data-id="{{post.id}}">Update</button>  
+      <div class="col-md-4 deletes pt-2">
+        <button id ="delButton" class="btn btn-secondary btn-sm" data-id="{{post.id}}">Delete</button>
+
+         <button id = "updateButton" class="btn btn-sm btn-secondary updates" data-id="{{post.id}}">Update</button>  
       </div>
     </div>
     {{/each}}
