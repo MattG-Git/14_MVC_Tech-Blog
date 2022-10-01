@@ -57,6 +57,9 @@ To use this application, first create an account or log in. Then either create a
 * Delete an existing blog post
 * Create a comment
 
+# Deployed Heroku application: 
+
+Please see [live page here](https://obscure-hamlet-17605.herokuapp.com/)
 
 # Screenshot
 ![Home Screen ](./public/assets/home_screen.png)
