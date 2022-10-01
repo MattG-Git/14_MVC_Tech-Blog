@@ -1,7 +1,7 @@
 # 14_MVC_Tech-Blog
 
 # Description
-This is a full stack application that a user may create an account, login, post, edit & delete articles and comments they have made while logged into their account. 
+This is a full stack application that a user may create an account, login, post, edit & delete articles and add comments they have made while logged into their account. 
 
 # Acceptance Criteria
 I wrote the  code to meet the following acceptance criteria:
@@ -43,22 +43,23 @@ I wrote the  code to meet the following acceptance criteria:
 # Installation
 
 * npm install to install required npm packages
-* Install Node.js to run application
 * Install MySQL to source Schema and seeds
+* npm start to initialize application
 
 # Usage
-To use this application, first create an account or log in. Then either create a post or comment on an existing post.  
+To use this application, first create an account or log in. Then either create a post, or comment on an existing post.  
 
 # Capabilities
 
 * Create an account
 * Create a new blog post
 * Update an existing blog post
-* Delete an exisint blog post
-* create a comment
+* Delete an existing blog post
+* Create a comment
 
 
 # Screenshot
-![MVC Tech Blog](./Screenshot.png)
-
-# Video Demo
+![Home Screen ](./public/assets/home_screen.png)
+![login Screen ](./public/assets/login.png)
+![dashboard ](./public/assets/dashboard.png)
+![blog post screen ](./public/assets/blog_post.png)
