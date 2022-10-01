@@ -22,7 +22,7 @@
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a class="text-decoration-none dashboard" href="/dashboard">Dashboard</a> |
-        <button id="logout">logout</button>
+        <button class="btn btn-secondary" id="logout">logout</button>
         {{else}}
         <a class="text-decoration-none login" href="/login">login</a>
         <a class="text-decoration-none signup" href="/signup">sign up</a>

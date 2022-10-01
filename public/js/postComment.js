@@ -1,18 +1,24 @@
 const newCommentHandler = async (event) => {
     event.preventDefault();
+    console.log('button hit')
 
     const contents = document.querySelector('#inputComment').value.trim();
-    const post_id = document.querySelector('comment-form').dataset.id
-    if (contents) {
+    console.log(contents); 
+
+    const post_id = document.querySelector('.comment-form').getAttribute('data-id'); 
+    console.log(post_id); 
+
+    if (contents && post_id) {
       const response = await fetch(`/api/comment`, {
         method: 'POST',
-        body: JSON.stringify({ post_id, contents, }),
+        body: JSON.stringify({ post_id, contents }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
+        console.log('comment handlder function successful'); 
         document.location.reload(); 
       } else {
         alert('Cannot Create Comment');

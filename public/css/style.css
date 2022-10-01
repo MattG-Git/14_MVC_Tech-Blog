@@ -67,14 +67,6 @@ header {
     padding-top: 25px;
 }
 
-#delButton {
-    background-color: #525564;
-}
-
-#updateButton {
-    background-color: #525564;
-}
-
 h2 {
     color: #525564;
 }
@@ -85,9 +77,4 @@ h4 {
 
 body {
     background-color:#fef6eb;
-}
-
-button {
-    background-color: #525564;
-    color: white;
 }
