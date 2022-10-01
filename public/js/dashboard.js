@@ -40,6 +40,10 @@ const newPostHandler= async (event) => {
   };
 
   const updateButtonHandler = async (event) => {
+
+    const title = document.querySelector('#title').value.trim();
+    const contents = document.querySelector('#article').value.trim();
+
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
 
@@ -69,8 +73,8 @@ const newPostHandler= async (event) => {
     b.addEventListener('click', delButtonHandler);
   }); 
    
-  let updatebuttons = document.querySelectorAll('.updates')
+  let updatebuttons = document.querySelectorAll('.update-post-form')
   
   updatebuttons.forEach((b) => {
-    b.addEventListener('click', updateButtonHandler);
+    b.addEventListener('submit', updateButtonHandler);
   }); 

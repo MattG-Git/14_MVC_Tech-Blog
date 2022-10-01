@@ -62,7 +62,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [
         { model: Post }, 
-        // { model: Comment }
       ],
     });
 
@@ -74,6 +73,23 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
   } catch (err) {
     console.log(err); 
+    res.status(500).json(err);
+  }
+});
+
+router.get('/update/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render('update', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
