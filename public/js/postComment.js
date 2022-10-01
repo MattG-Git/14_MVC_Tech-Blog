@@ -1,3 +1,4 @@
+//event handler for a signed in user to be able to add a comment to an existing blog post when in the post.handlebars view
 const newCommentHandler = async (event) => {
     event.preventDefault();
     console.log('button hit')

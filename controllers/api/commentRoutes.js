@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Renders all comments
+// API GET route for all comments 
 router.get('/', async (req, res) => {
   try {
     const comments = await Comment.findAll({
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Renders specific comment by id
+// API GET route for individual comment
 router.get('/:id', async (req, res) => {
   try {
     const commentData = await Comment.findByPk(req.params.id, {
@@ -43,7 +43,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Creates new comment
+// API POST route to add a new comment 
 router.post('/', async (req, res) => {
   try {
     const newComment = await Comment.create({
@@ -57,7 +57,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Edits specific comment by id
+// API PUT route to update an existing comment
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const commentData = await Comment.update (
@@ -80,7 +80,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 })
 
-// deletes specific comment by id
+// API DELETE route for comments by ID
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const commentData = await Comment.destroy({

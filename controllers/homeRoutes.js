@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+//home route for the homepage
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -24,6 +25,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//home route for an individual blog post at /post
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -55,6 +57,7 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+// home route for a user's dashboard
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
 
@@ -77,6 +80,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+//home route for the user to update one of their blog posts 
 router.get('/update/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -94,6 +98,7 @@ router.get('/update/:id', withAuth, async (req, res) => {
   }
 });
 
+// home route to redirect user to their dashboard after login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
@@ -102,6 +107,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//home route to redirect the user to the dashboard after the signup
 router.get('/signup', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');

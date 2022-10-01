@@ -1,3 +1,4 @@
+// handler function for when a user submits a new title and post contents from their dashboard
 const newPostHandler= async (event) => {
     event.preventDefault();
   
@@ -20,7 +21,7 @@ const newPostHandler= async (event) => {
       }
     }
   };
-  
+  //event handler that allows a user to delete their owned blog posts from their dashboard
   const delButtonHandler = async (event) => {
     
     if (event.target.hasAttribute('data-id')) {
@@ -39,42 +40,13 @@ const newPostHandler= async (event) => {
     }
   };
 
-  const updateButtonHandler = async (event) => {
-
-    const title = document.querySelector('#title').value.trim();
-    const contents = document.querySelector('#article').value.trim();
-
-    if (event.target.hasAttribute('data-id')) {
-        const id = event.target.getAttribute('data-id');
-
-        const response = await fetch(`/api/post/${id}`, {
-            method: 'PUT',
-            body: JSON.stringify({ title, contents }),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        });
-
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        }else {
-            alert ('Cannot Update Blog Post')
-        }
-    }
-  };
+  //attaching the event handlers to the buttons within the handlebar views 
+document
+  .querySelector('.new-post-form')
+  .addEventListener('submit', newPostHandler);
   
-  document
-    .querySelector('.new-post-form')
-    .addEventListener('submit', newPostHandler);
+let deletebuttons = document.querySelectorAll('.deletes')
   
-  let deletebuttons = document.querySelectorAll('.deletes')
-  
-  deletebuttons.forEach((b) => {
-    b.addEventListener('click', delButtonHandler);
-  }); 
-   
-  let updatebuttons = document.querySelectorAll('.update-post-form')
-  
-  updatebuttons.forEach((b) => {
-    b.addEventListener('submit', updateButtonHandler);
-  }); 
+deletebuttons.forEach((b) => {
+  b.addEventListener('click', delButtonHandler);
+}); 

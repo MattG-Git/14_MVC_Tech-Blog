@@ -5,11 +5,11 @@
     <form class="form update-post-form mb-3" data-id="{{id}}">
       <div class="form-group">
         <label class="mb-3 pr-2" for="title">Title:</label>
-        <input class="form-input" type="text" id="title" name="title" />
+        <input class="form-input" type="text" id="title" name="title" value="{{title}}"/>
       </div>
       <div class="form-group">
         <label for="article">Blog Post:</label>
-        <textarea value="{{contents}}"class="form-input" id="article" name="article"></textarea>
+        <input value="{{contents}}" class="form-input" id="article" name="article"></input>
       </div>
       <div class="form-group mt-3">
         <button type="submit" class="btn btn-secondary">Confirm Changes</button>
@@ -18,4 +18,4 @@
   </div>
 </div>
 
-<script src="./js/dashboard.js"></script>
+<script src="/js/update.js"></script>
